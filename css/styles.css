@@ -2,9 +2,9 @@
 .grid-container {     
     display: grid;     
     grid-template-areas:          
-    "header header header"         
-    "nav main sidebar"         
-    "footer footer footer";     
+        "header header header"         
+        "nav main sidebar"         
+        "footer footer footer";     
     grid-template-columns: 200px 1fr 200px;     
     grid-template-rows: auto 1fr auto;     
     min-height: 100vh;     
@@ -26,9 +26,9 @@
     
 .main {     
         
-            grid-area: main;     
-            background: #BBDEFB;     
-            padding: 1rem; 
+        grid-area: main;     
+        background: #BBDEFB;     
+        padding: 1rem; 
 }
       
 .sidebar {     
@@ -42,3 +42,26 @@
         padding: 1rem;
         color: white; 
 }
+/* สำหรับแท็บเล็ต */
+@media (max-width: 768px) {     
+        .grid-container {         
+                grid-template-areas:              
+                "header header"             
+                "nav nav"             
+                "main sidebar"             
+                "footer footer";         
+                grid-template-columns: 1fr 200px;     
+        } 
+}  
+/* สาหรับมือถือ */ 
+@media (max-width: 480px) {     
+        .grid-container {         
+                grid-template-areas:              
+                "header"             
+                "nav"             
+                "main"             
+                "sidebar"             
+                "footer";         
+                grid-template-columns: 1fr;     
+        } 
+} 
